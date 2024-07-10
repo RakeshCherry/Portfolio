@@ -23,6 +23,11 @@ const config = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
+        xl: {max: "1279px"},
+        lg: {max: "1023px"},
+        md: {max: "767px"},
+        sm: {max: "639px"},
+        xs: {max: "479px"},
       },
     },
     extend: {
@@ -161,8 +166,8 @@ const config = {
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       backgroundImage:{
-        circularDark: 'repeating-radial-gradient(rgba(255,255,255, 0.5) 2px, #000319 8px, #000319 50px)',
-        circularSmallDark: 'repeating-radial-gradient(closest-side, #000319, #000319, #000)',
+        circularDark: 'repeating-radial-gradient(rgba(255,255,255, 0.5) 2px, #000319 8px, #000319 100px)',
+        // smallCircularDark: 'repeating-radial-gradient(rgba(255,255,255, 0.5) 1px, #000319 5px, #000 100px)',
       }
     },
   },

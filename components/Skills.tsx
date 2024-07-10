@@ -20,7 +20,7 @@ const Skill: React.FC<SkillProps> = ({ img, x, y }) => {
       whileInView={{ x: x, y: y }}
       transition={{ duration: 1.5 }}
     >
-      <img src={img} alt="Skill" className="w-16 h-16" />
+      <img src={img} alt="Skill" className="w-6 h-6 md:w-16 md:h-16 sm:w-16 sm:h-16" />
     </motion.div>
   )
 }
@@ -48,8 +48,8 @@ const Skills = () => {
   ];
   return (
     <>
-    <h2 className='heading' id='Skills'>Skills</h2>
-    <div className='w-full h-screen relative flex items-center justify-center rounded-full bg-circularDark'>
+    <h2 className='heading mb-[25px]' id='Skills'>Skills</h2>
+    <div className='md:w-full md:h-screen sm:w-full sm:h-screen w-[350px] h-[25vh] relative flex items-center justify-center rounded-full md:bg-circularDark sm:bg-circularDark'>
     
       <motion.div className='flex items-center justify-center rounded-full cursor-pointer'
       whileHover={{scale:1.05}}
@@ -63,7 +63,7 @@ const Skills = () => {
             y={positions[index % positions.length].y} 
           />
         ))}
-        <img src="./web-developer.svg" className='w-16 h-16 sm:w-8 sm:h-8' alt="img" />
+        <img src="./web-developer.svg" className='w-6 h-6 md:w-16 md:h-16 sm:w-16 sm:h-16' alt="img" />
       </motion.div>
     </div>
     </>
