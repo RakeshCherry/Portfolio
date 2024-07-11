@@ -22,7 +22,6 @@ export default function Home() {
         <RecentProjects/>
         <Achivements/>
         <Approach/>
-        <OtherSkills/>
       </div>
     </main>
   );
