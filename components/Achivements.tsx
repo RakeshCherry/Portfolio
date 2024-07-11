@@ -9,10 +9,7 @@ const Achivements = () => {
     <div id='Achivements'>
     <h1 className='heading pb-10'>
         My <span className='text-purple'>
-        Achivements
-        </span> and {' '}
-        <span className='text-purple'>
-             Certificates
+        Approach
         </span>
     </h1>
     <div className='flex flex-col items-center'>
@@ -26,7 +23,6 @@ const Achivements = () => {
         
     </div>
     </div>
-    <OtherSkills/>
     </>
   )
 }

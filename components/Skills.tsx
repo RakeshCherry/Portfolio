@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import {motion} from 'framer-motion'
+import {motion, useInView} from 'framer-motion'
 import { MySkills } from '@/data';
 
 interface SkillProps {
@@ -18,7 +18,8 @@ const Skill: React.FC<SkillProps> = ({ img, x, y }) => {
       whileHover={{ scale: 1.05 }}
       initial={{ x: 0, y: 0 }}
       whileInView={{ x: x, y: y }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 1 }}
+      viewport={{once:true}}
     >
       <img src={img} alt="Skill" className="w-6 h-6 md:w-16 md:h-16 sm:w-16 sm:h-16" />
     </motion.div>
@@ -52,7 +53,6 @@ const Skills = () => {
     <div className='md:w-full md:h-screen sm:w-full sm:h-screen w-[350px] h-[25vh] relative flex items-center justify-center rounded-full md:bg-circularDark sm:bg-circularDark'>
     
       <motion.div className='flex items-center justify-center rounded-full cursor-pointer'
-      whileHover={{scale:1.05}}
       >
         {MySkills.map(({ id, img, className}, index) => (
         <Skill 

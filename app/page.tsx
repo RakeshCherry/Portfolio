@@ -1,6 +1,8 @@
 import Achivements from "@/components/Achivements";
+import Approach from "@/components/Approach";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
+import OtherSkills from "@/components/OtherSkills";
 import RecentProjects from "@/components/RecentProjects";
 import Skills from "@/components/Skills";
 import { FloatingNav } from "@/components/ui/FloatingNav";
@@ -19,6 +21,8 @@ export default function Home() {
         <Skills/>
         <RecentProjects/>
         <Achivements/>
+        <Approach/>
+        <OtherSkills/>
       </div>
     </main>
   );

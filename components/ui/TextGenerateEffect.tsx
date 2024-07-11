@@ -27,18 +27,21 @@ export const TextGenerateEffect = ({
 
   const renderWords = () => {
     return (
-      <motion.div ref={scope}>
-        {wordsArray.map((word, idx) => {
-          return (
-            <motion.span
-              key={word + idx}
-              className={`${idx > 3 ? 'text-purple' : 'dark:text-white text-black' } opacity-0`}
-            >
-              {word}{" "}
-            </motion.span>
-          );
-        })}
-      </motion.div>
+      <motion.div ref={scope} className={className}>
+      {wordsArray.map((word, idx) => {
+        const isSpecialIndex = [3, 8, 9].includes(idx);
+        const textColorClass = isSpecialIndex ? 'text-purple' : 'dark:text-white text-black';
+
+        return (
+          <motion.span
+            key={word + idx}
+            className={`${textColorClass} opacity-0`}
+          >
+            {word}{" "}
+          </motion.span>
+        );
+      })}
+    </motion.div>
     );
   };
 
