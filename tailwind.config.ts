@@ -31,6 +31,12 @@ const config = {
       },
     },
     extend: {
+        screens: {
+          'custom-xs': { 'max': '480px' }, // up to 480px
+          'custom-sm': { 'min': '481px', 'max': '639px' }, // 481px to 639px
+          'custom-xsm': { 'min': '640px', 'max': '999px'}, // 640px to 999px
+          'custom-md': { 'min': '1000px', 'max': '1279px' }, // 700px to 1279px
+        },
       colors: {
         black: {
           DEFAULT: "#000",

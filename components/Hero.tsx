@@ -5,6 +5,7 @@ import MagicButton from './ui/MagicButton'
 import { FaLocationArrow } from 'react-icons/fa'
 
 const Hero = () => {
+  
   return (
     <div className="pb-5 py-10">
         <div>
@@ -16,7 +17,7 @@ const Hero = () => {
           {/* Radial gradient for the container to give a faded look */}
           <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>
     </div>
-    <div className="flex flex-col sm:flex-row sm:justify-center sm:items-center w-full relative mt-40 mb-10 z-10">
+    <div className="flex custom-xs:flex-col custom-sm:flex-col flex-row custom-xs:justify-around custom-sm:justify-around items-center w-full relative custom-xs:mt-40 custom-sm:mt-40 custom-xsm:mt-40 mt-30 cu mb-10 z-10">
       <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
         <h2 className='uppercase tracking-widest text-xs text-center text-blue-100 max-w-80'>
           Dynamic Web Magic with Next.js
@@ -37,7 +38,7 @@ const Hero = () => {
         </a>
       </div>
       <div className='my-10'>
-        <img src="/MyProfileDP.jpg" alt="photo" className=' sm:inline-block w-full h-auto md:w-full rounded-full'/>
+        <img src="/MyProfileDP.jpg" alt="photo" className=' w-[350px] custom-xs:w-[300px] custom-xs:h-[350] rounded-full'/>
       </div>
     </div>
 
