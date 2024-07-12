@@ -5,7 +5,8 @@ export const navItems = [
   { name: "Projects", link: "#projects" },
   { name: "Skills", link: "#Skills" },
   { name: "Other", link: "#Achivements"},
-  { name: "Contact", link: "#contact" },
+  // { name: "Contact", link: "/#Contact" },
+
 ];
 
 export const gridItems = [
@@ -308,6 +309,13 @@ export const socialMedia = [
   {
     id: 4,
     img: "/link.svg",
-    link:"",
+    link:"#Connect",
   },
 ];
+
+export const Contact = [
+  {
+    id: 1,
+    link:"#Connect",
+  },
+]

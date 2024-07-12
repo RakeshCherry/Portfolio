@@ -10,7 +10,9 @@ import Skills from "@/components/Skills";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { navItems } from "@/data";
 import Image from "next/image";
+import Link from "next/link";
 import { FaHome } from "react-icons/fa";
+
 
 export default function Home() {
   return (
@@ -25,8 +27,9 @@ export default function Home() {
         <Achivements/>
         <Approach/>
         <Footer/>
-        <GmailConnect/>
+        {/* <GmailConnect/> */}
       </div>
     </main>
   );
 }
+
