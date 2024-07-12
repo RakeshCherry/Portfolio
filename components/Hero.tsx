@@ -37,7 +37,7 @@ const Hero = () => {
         </a>
       </div>
       <div className='my-10'>
-        <img src="/MyProfileDP.jpg" alt="photo" className=' w-full h-auto md:w-full rounded-full'/>
+        <img src="/MyProfileDP.jpg" alt="photo" className=' sm:inline-block w-full h-auto md:w-full rounded-full'/>
       </div>
     </div>
 
