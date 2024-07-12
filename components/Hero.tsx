@@ -16,7 +16,7 @@ const Hero = () => {
           {/* Radial gradient for the container to give a faded look */}
           <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>
     </div>
-    <div className="flex flex-col items-baseline w-full relative mt-40 mb-10 z-10">
+    <div className="flex flex-col sm:flex-row sm:justify-center sm:items-center w-full relative mt-40 mb-10 z-10">
       <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
         <h2 className='uppercase tracking-widest text-xs text-center text-blue-100 max-w-80'>
           Dynamic Web Magic with Next.js
@@ -37,7 +37,7 @@ const Hero = () => {
         </a>
       </div>
       <div className='my-10'>
-        <img src="/MyProfileDP.jpg" alt="photo" className=' w-full h-auto lg:hidden md:inline-block md:w-full rounded-full'/>
+        <img src="/MyProfileDP.jpg" alt="photo" className=' w-full h-auto md:w-full rounded-full'/>
       </div>
     </div>
 
