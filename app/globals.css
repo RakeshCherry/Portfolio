@@ -80,7 +80,7 @@
 
 @layer utilities {
   .heading {
-    @apply font-bold text-4xl md:text-5xl text-center opacity-0;
+    @apply font-bold text-4xl md:text-5xl text-center;
   }
   .heading-2 {
     @apply text-2xl md:text-3xl font-bold text-center;
