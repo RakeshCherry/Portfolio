@@ -1,6 +1,7 @@
 import Achivements from "@/components/Achivements";
 import Approach from "@/components/Approach";
 import Footer from "@/components/Footer";
+import GmailConnect from "@/components/GmailConnect";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import OtherSkills from "@/components/OtherSkills";
@@ -24,6 +25,7 @@ export default function Home() {
         <Achivements/>
         <Approach/>
         <Footer/>
+        <GmailConnect/>
       </div>
     </main>
   );

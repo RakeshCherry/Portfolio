@@ -292,16 +292,21 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
+    img: "/discord.svg",
+    link:"https://discord.gg/DQw9NrawEh",
+  },
+  {
+    id: 2,
     img: "/git.svg",
     link:"",
   },
   {
-    id: 2,
+    id: 3,
     img: "/insta.svg",
     link:"https://www.instagram.com/rakeshbhavimani?igsh=MXFlZGxwajV0NmRqcg==",
   },
   {
-    id: 3,
+    id: 4,
     img: "/link.svg",
     link:"",
   },
