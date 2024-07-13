@@ -1,8 +1,8 @@
 'use client'
 
-import React from 'react'
 import {motion, useInView} from 'framer-motion'
 import { MySkills } from '@/data';
+import { useEffect, useState } from 'react';
 
 interface SkillProps {
   img: string;
@@ -21,50 +21,114 @@ const Skill: React.FC<SkillProps> = ({ img, x, y }) => {
       transition={{ duration: 1 }}
       viewport={{once:true}}
     >
-      <img src={img} alt="Skill" className="w-6 h-6 md:w-16 md:h-16 sm:w-16 sm:h-16" />
+      <img src={img} alt="Skill" className="w-10 h-10 custom-xs:w-6 custom-xs:h-6" />
     </motion.div>
   )
 }
 
+const skillSet = [
+  {skill: 'HTML & CSS'},
+  {skill: 'JavaScript'},
+  {skill: 'ReactJS'},
+  {skill: 'TailwindCSS'},
+  {skill: 'Sass'},
+  {skill: 'JAVA'},
+  {skill: 'SpringBoot'},
+  {skill: 'Microservices'},
+  {skill: 'Spring Security'},
+  {skill: 'MySql'},
+  {skill: 'MongoDB'},
+  {skill: 'AWS'},
+  {skill: 'Kafka'},
+  {skill: 'Redis'},
+  {skill: 'Docker'},
+
+  
+]
 
 const Skills = () => {
 
-  const positions = [
-    { x: '-22vw', y: '-3vw' }, //MaterialUi
-    { x: '30vw', y: '-10vw' }, //javascript
-    { x: '20vw', y: '14vw' }, //reactjs
-    { x: '0vw', y: '18vw' }, //postman
-    { x: '-20vw', y: '-15vw' }, //springboot
-    { x: '15vw', y: '-11vw' }, //MySql
-    { x: '-0vw', y: '-10vw' }, //Docker
-    { x: '0vw', y: '-20vw' }, //github
-    { x: '-28vw', y: '10vw' }, //intellij
-    { x: '-15vw', y: '10vw' }, //Saas
-    { x: '25vw', y: '3vw' }, //AWS
-    { x: '34vw', y: '10vw' }, //Mangodb
-    { x: '-10vw', y: '0vw' }, //html
-    { x: '11vw', y: '-2vw' }, //Nextjs
-    { x: '3vw', y: '10vw' }, //CSS
-    { x: '-35vw', y: '0vw' }, //Redis
-  ];
+  // const positions = [
+    const [positions, setPositions] = useState<{ x: string; y: string }[]>([])
+
+    useEffect(() => {
+      const updatePositions = () => {
+        if (window.innerWidth < 768) {
+          // Mobile positions
+          setPositions([
+            { x: '-19vw', y: '-8vw' }, //MaterialUi 1
+            { x: '30vw', y: '-10vw' }, //javascript 2
+            { x: '20vw', y: '14vw' }, //reactjs 3
+            { x: '4vw', y: '18vw' }, //postman 4
+            { x: '-23vw', y: '-20vw' }, //springboot 5
+            { x: '15vw', y: '-11vw' }, //MySql  6
+            { x: '-0vw', y: '-10vw' }, //Docker 7
+            { x: '0vw', y: '-25vw' }, //github 8
+            { x: '-28vw', y: '10vw' }, //intellij 9
+            { x: '-13vw', y: '10vw' }, //tailwindcss
+            { x: '25vw', y: '3vw' }, //AWS 11
+            { x: '36vw', y: '8vw' }, //Mangodb 12
+            { x: '-10vw', y: '0vw' }, //html 13
+            { x: '11vw', y: '2vw' }, //Nextjs 14
+            { x: '-12vw', y: '20vw' }, //Sass
+            { x: '-35vw', y: '-3vw' }, //Redis 16
+            { x: '20vw', y: '-20vw' }, //css-3
+          ])
+        } else {
+          // Large screen positions
+          setPositions([
+            { x: '-10vw', y: '-4vw' }, //MaterialUi 1
+            { x: '18vw', y: '-5vw' }, //javascript 2
+            { x: '13vw', y: '11vw' }, //reactjs 3
+            { x: '0vw', y: '13vw' }, //postman 4
+            { x: '-15vw', y: '-10vw' }, //springboot 5
+            { x: '8vw', y: '-5vw' }, //MySql 6
+            { x: '-0vw', y: '-7vw' }, //Docker 7
+            { x: '0vw', y: '-13vw' }, //github  8
+            { x: '-10vw', y: '11vw' }, //intellij  9
+            { x: '-10vw', y: '5vw' }, //tailwind 10
+            { x: '10vw', y: '3vw' }, //AWS 11
+            { x: '18vw', y: '4vw' }, //Mangodb 12
+            { x: '-5vw', y: '0vw' }, //html 13
+            { x: '5vw', y: '0vw' }, //Nextjs 14
+            { x: '3vw', y: '7vw' }, //Sass 15
+            { x: '10vw', y: '-10vw' }, //Redis 16
+            { x: '-20vw', y: '0vw' }, //css 17
+          ])
+        }
+      }
+  
+      // Set initial positions
+      updatePositions()
+  
+      // Update positions on window resize
+      window.addEventListener('resize', updatePositions)
+      return () => window.removeEventListener('resize', updatePositions)
+    }, [])
   return (
     <>
     <h2 className='heading mb-[25px]' id='Skills'>Skills</h2>
-    <div className='md:w-full md:h-screen sm:w-full sm:h-screen w-[350px] h-[25vh] relative flex items-center justify-center rounded-full md:bg-circularDark sm:bg-circularDark'>
-    
-      <motion.div className='flex items-center justify-center rounded-full cursor-pointer'
+    <div className='flex custom-xs:flex-col items-center justify-evenly'>
+    <div className='w-[50vw] h-[70vh] custom-xs:w-full custom-xs:h-[30vh] flex items-center justify-center'>
+      <motion.div className='w-full custom-xs:w-screen custom-xs:h-[30vh] h-full flex items-center justify-center rounded-full cursor-pointer md:bg-circularDark'
       >
-        {MySkills.map(({ id, img, className}, index) => (
+        {positions.length > 0 && MySkills.map(({ id, img, className}, index) => (
         <Skill 
             key={id} 
             img={img}
             className={className}
             x={positions[index % positions.length].x} 
-            y={positions[index % positions.length].y} 
+            y={positions[index % positions.length].y}
           />
         ))}
-        <img src="./web-developer.svg" className='w-6 h-6 md:w-16 md:h-16 sm:w-16 sm:h-16' alt="img" />
+        <img src="./web-developer.svg" className='w-10 h-10 custom-xs:w-6 custom-xs:h-6' alt="img" />
       </motion.div>
+    </div>
+    <div className='w-[40vw] custom-smx:w-full flex flex-wrap custom-xsm:flex-col flex-row justify-center'>
+        {skillSet.map((item, idx) =>{
+          return <p key={idx} className="mr-[5px] mt-[5px] py-2 px-3 text-white-100 custom-smx:text-sm font-poppins opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E] border border-white/[0.1]">{item.skill}</p>
+        })}
+      </div>
     </div>
     </>
   )

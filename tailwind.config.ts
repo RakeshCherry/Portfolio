@@ -34,6 +34,7 @@ const config = {
         screens: {
           'custom-xs': { 'max': '480px' }, // up to 480px
           'custom-sm': { 'min': '481px', 'max': '639px' }, // 481px to 639px
+          'custom-smx': {'min': '360px', 'max': '900px'}, // 360px to 749px
           'custom-xsm': { 'min': '640px', 'max': '999px'}, // 640px to 999px
           'custom-md': { 'min': '1000px', 'max': '1279px' }, // 700px to 1279px
         },
@@ -174,7 +175,10 @@ const config = {
       backgroundImage:{
         circularDark: 'repeating-radial-gradient(rgba(255,255,255, 0.5) 2px, #000319 8px, #000319 100px)',
         // smallCircularDark: 'repeating-radial-gradient(rgba(255,255,255, 0.5) 1px, #000319 5px, #000 100px)',
-      }
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
     },
   },
   plugins: [

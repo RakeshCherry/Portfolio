@@ -170,6 +170,13 @@ export const MySkills = [
     img: "/redis.svg",
     className:"",
 },
+  {
+    id: 18,
+    title: 'css-3',
+    img: "/css-3.svg",
+    className:"",
+},
+
 
 ];
 
