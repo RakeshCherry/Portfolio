@@ -2,7 +2,8 @@
 
 import {motion, useInView} from 'framer-motion'
 import { MySkills } from '@/data';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { div } from 'three/examples/jsm/nodes/Nodes.js';
 
 interface SkillProps {
   img: string;
@@ -47,6 +48,9 @@ const skillSet = [
 ]
 
 const Skills = () => {
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   // const positions = [
     const [positions, setPositions] = useState<{ x: string; y: string }[]>([])
@@ -108,7 +112,7 @@ const Skills = () => {
   return (
     <>
     <h2 className='heading mb-[25px]' id='Skills'>Skills</h2>
-    <div className='flex custom-xs:flex-col items-center justify-evenly'>
+    <div className='flex custom-smx:flex-col items-center justify-evenly'>
     <div className='w-[50vw] h-[70vh] custom-xs:w-full custom-xs:h-[30vh] flex items-center justify-center'>
       <motion.div className='w-full custom-xs:w-screen custom-xs:h-[30vh] h-full flex items-center justify-center rounded-full cursor-pointer md:bg-circularDark'
       >
@@ -124,10 +128,19 @@ const Skills = () => {
         <img src="./web-developer.svg" className='w-10 h-10 custom-xs:w-6 custom-xs:h-6' alt="img" />
       </motion.div>
     </div>
-    <div className='w-[40vw] custom-smx:w-full flex flex-wrap custom-xsm:flex-col flex-row justify-center'>
-        {skillSet.map((item, idx) =>{
-          return <p key={idx} className="mr-[5px] mt-[5px] py-2 px-3 text-white-100 custom-smx:text-sm font-poppins opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E] border border-white/[0.1]">{item.skill}</p>
-        })}
+    <div ref={ref} className='w-[40vw] custom-smx:w-full flex flex-wrap flex-row justify-center'>
+        {isInView && skillSet.map((item, idx) =>(
+           <motion.p
+           key={idx}
+           className="mr-[5px] mt-[5px] py-2 px-3 text-white-100 custom-smx:text-sm font-poppins opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E] border border-white/[0.1]"
+           initial={{ opacity: 0, y: 10 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ delay: idx * 0.05, duration: 0.5 }}
+          //  viewport={{ once: true }}
+         >
+           {item.skill}
+         </motion.p>
+        ))}
       </div>
     </div>
     </>

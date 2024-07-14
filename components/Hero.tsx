@@ -1,8 +1,11 @@
-import React, { useEffect } from 'react'
+'use client'
+
+import React from 'react'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import MagicButton from './ui/MagicButton'
 import { FaLocationArrow } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 const Hero = () => {
   
@@ -20,13 +23,13 @@ const Hero = () => {
     <div className="flex custom-smx:flex-col flex-row custom-smx:justify-around items-center w-full relative custom-xs:mt-40 custom-sm:mt-40 custom-xsm:mt-40 mt-40 mb-10 z-10">
       <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
         <h2 className='uppercase tracking-widest text-xs text-center text-blue-100 max-w-80'>
-          Dynamic Web Magic with Next.js
+        Driven Web Development Aficionado
         </h2>
         <TextGenerateEffect
         className='text-center text-[40px] md:text-5xl'
         words="Transforming Concepts into Seamless User Experiences"
         />
-        <p className="text-center md:tracking-wider text-sm md:text-lg lg:text-2xl mb-4">
+        <p className="font-Dancing_Script text-center md:tracking-wider text-sm md:text-lg lg:text-2xl mb-4">
             Hi I&apos;m <span className="text-orange-500 font-bold uppercase">Rakesh</span>, a Full Stack Developer based in Bengaluru.
         </p>
         <a href="#about">

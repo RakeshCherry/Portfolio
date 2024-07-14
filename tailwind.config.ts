@@ -1,3 +1,4 @@
+import { Dancing_Script } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const svgToDataUri = require("mini-svg-data-uri");
@@ -178,6 +179,7 @@ const config = {
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+        Dancing_Script: ['Dancing Script', 'cursive']
       },
     },
   },

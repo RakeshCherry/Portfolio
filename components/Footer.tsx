@@ -1,21 +1,41 @@
 'use client'
 
-import React from 'react'
+import React, { useRef } from 'react'
 import MagicButton from './ui/MagicButton'
 import { FaLocationArrow } from 'react-icons/fa'
 import { Contact, socialMedia } from '@/data'
 import { div } from 'three/examples/jsm/nodes/Nodes.js'
 import GmailConnect from './GmailConnect'
 import Link from 'next/link'
+import { motion, useInView } from 'framer-motion'
+import { TextGenerateEffect } from './ui/TextGenerateEffect'
+import { TextGenerateEffectNoColor } from './ui/TextGenerateEffectNoColor'
+
+
+    const footerText = 'Ready to take your digital presence to the next level?'
+    const footerword = footerText.split('')
 
 const Footer = () => {
+
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+
   return (
     <footer className="w-full pt-10 pb-10" id='contact'>
 
         <div className='flex flex-col items-center'>
-            <h1 className='heading lg:max-w-[45vw]'>
+
+
+            <TextGenerateEffectNoColor
+                  className='heading lg:max-w-[50vw]'
+                  words='Ready to take your digital presence to the next level?'
+            />
+
+            {/* <h1 className='heading lg:max-w-[45vw]'>
                 Ready to take <span className='text-purple'>your</span> digital presence to the <span className='text-purple'>next level?</span>
-            </h1>
+            </h1> */}
+
+
             <p className='text-white-200 md:mt-10 my-5 text-center'>
                 Reach out to me today and let&apos;s discuss how I can help you achive your goals.
             </p>

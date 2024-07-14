@@ -7,7 +7,7 @@ import { div } from "three/examples/jsm/nodes/Nodes.js";
 
 const Approach = () => {
   return (
-    <section className="w-full py-20">
+    <section className="w-full py-20 custom-smx:py-0">
         <h1 className="heading">
             My <span className="text-purple">Approach</span>
         </h1>
