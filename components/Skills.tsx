@@ -22,7 +22,7 @@ const Skill: React.FC<SkillProps> = ({ img, x, y }) => {
       transition={{ duration: 1 }}
       viewport={{once:true}}
     >
-      <img src={img} alt="Skill" className="w-10 h-10 custom-xs:w-6 custom-xs:h-6" />
+      <img src={img} alt="Skill" className="w-8 h-9 custom-xs:w-5 custom-xs:h-5" />
     </motion.div>
   )
 }
