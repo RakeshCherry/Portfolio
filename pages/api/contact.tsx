@@ -1,13 +1,21 @@
-import { mailOptions, transporter } from "../../config/nodemailer";
+import { NextApiRequest, NextApiResponse } from 'next';
+import { mailOptions, transporter } from '../../config/nodemailer';
 
-const CONTACT_MESSAGE_FIELDS = {
+const CONTACT_MESSAGE_FIELDS: { [key: string]: string } = {
   name: "Name",
   email: "Email",
   subject: "Subject",
   message: "Message",
 };
 
-const generateEmailContent = (data) => {
+interface ContactMessage {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
+const generateEmailContent = (data: ContactMessage) => {
   const stringData = Object.entries(data).reduce(
     (str, [key, val]) =>
       (str += `${CONTACT_MESSAGE_FIELDS[key]}: \n${val} \n \n`),
@@ -23,9 +31,9 @@ const generateEmailContent = (data) => {
   };
 };
 
-const handler = async (req, res) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
-    const data = req.body;
+    const data: ContactMessage = req.body;
     if (!data || !data.name || !data.email || !data.subject || !data.message) {
       return res.status(400).send({ message: "Bad request" });
     }
@@ -40,9 +48,10 @@ const handler = async (req, res) => {
       return res.status(200).json({ success: true });
     } catch (err) {
       console.log(err);
-      return res.status(400).json({ message: err.message });
+      return res.status(400).json({ message: (err as Error).message });
     }
   }
   return res.status(400).json({ message: "Bad request" });
 };
+
 export default handler;
