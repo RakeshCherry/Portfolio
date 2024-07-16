@@ -1,17 +1,15 @@
+
 import Achivements from "@/components/Achivements";
 import Approach from "@/components/Approach";
 import Footer from "@/components/Footer";
 import GmailConnect from "@/components/GmailConnect";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
-import OtherSkills from "@/components/OtherSkills";
 import RecentProjects from "@/components/RecentProjects";
 import Skills from "@/components/Skills";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { navItems } from "@/data";
-import Image from "next/image";
-import Link from "next/link";
-import { FaHome } from "react-icons/fa";
+
 
 
 export default function Home() {
@@ -27,7 +25,6 @@ export default function Home() {
         <Achivements/>
         <Approach/>
         <Footer/>
-        {/* <GmailConnect/> */}
       </div>
     </main>
   );

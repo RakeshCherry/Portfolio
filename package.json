@@ -9,14 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/next-js": "^2.2.0",
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@react-three/drei": "^9.108.3",
     "@react-three/fiber": "^8.16.8",
     "@sentry/nextjs": "^8.17.0",
+    "@types/nodemailer": "^6.4.15",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.3.2",
+    "framer-motion": "^11.3.4",
     "gsap": "^3.12.5",
     "intersection-observer": "^0.12.2",
     "mini-svg-data-uri": "^1.4.4",
