@@ -2,7 +2,6 @@
 import Achivements from "@/components/Achivements";
 import Approach from "@/components/Approach";
 import Footer from "@/components/Footer";
-import GmailConnect from "@/components/GmailConnect";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import RecentProjects from "@/components/RecentProjects";
