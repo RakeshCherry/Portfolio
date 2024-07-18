@@ -15,3 +15,12 @@ export const mailOptions = {
   from: email,
   to: email,
 };
+
+export const sendMail = async () => {
+  try {
+    await transporter.sendMail(mailOptions);
+    console.log("Email sent successfully");
+  } catch (error) {
+    console.error("Error sending email:", error);
+  }
+};

@@ -81,7 +81,7 @@ const GmailConnect: React.FC = () => {
       setState((prev) => ({
         ...prev,
         isLoading: false,
-        error: "An error occurred",
+        error: "Something went wrong",
       }));
     }
   };
