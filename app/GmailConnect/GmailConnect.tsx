@@ -1,6 +1,7 @@
 'use client'
 
 import {
+  Box,
   Button,
   Container,
   FormControl,
@@ -14,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { sendContactForm } from "@/components/ui/api";
+import { div } from "three/examples/jsm/nodes/Nodes.js";
 
 interface FormValues {
   name: string;
@@ -85,7 +87,7 @@ const GmailConnect: React.FC = () => {
   };
 
   return (
-    <Container maxW="450px" mt={12}>
+    <Container maxW="450px" mt={12} bg="#000319" color="white" p={6} borderRadius="md" boxShadow='2xl'>
       <Heading>Contact</Heading>
       {error && (
         <Text color="red.300" my={4} fontSize="xl">
