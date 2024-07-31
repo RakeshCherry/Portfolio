@@ -179,7 +179,8 @@ const config = {
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
-        Dancing_Script: ['Dancing Script', 'cursive']
+        Dancing_Script: ['Dancing Script', 'cursive'],
+        Stylish: ['Stylish, serif']
       },
     },
   },

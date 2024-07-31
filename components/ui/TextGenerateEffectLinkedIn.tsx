@@ -15,7 +15,7 @@ export const TextGenerateEffectLinkedIn = ({
   const [scope, animate] = useAnimate();
   let wordsArray = words.split(" ");
   const orangeIndices = [6];
-  const purpleIndices = [8, 9];
+  const purpleIndices = [10, 11, 12, 13];
   
   useEffect(() => {
     if (isInView) {
