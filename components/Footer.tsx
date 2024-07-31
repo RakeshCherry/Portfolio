@@ -41,7 +41,7 @@ const Footer = () => {
             </h1> */}
 
 
-            <p className='text-white-200 md:mt-10 my-5 text-center'>
+            <p className='text-white text-[20px] md:mt-10 my-5 font-Stylish text-center'>
                 Reach out to me today and let&apos;s discuss how I can help you achive your goals.
             </p>
             <MagicButton
