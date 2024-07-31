@@ -6,7 +6,8 @@ import React from 'react'
 const LinkedIn = () => {
   return (
     <>
-    <div className='flex flex-col items-center'>
+    <div className="h-[100vh] relative w-full overflow-hidden bg-slate-950 flex flex-col items-center justify-center rounded-lg">
+    <div className="absolute inset-0 w-full h-full bg-slate-950 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
     <BoxesCore/>
     <TextGenerateEffectLinkedIn
                   className='lg:max-w-[70vw] font-Stylish text-center md:tracking-wider custom-sm:text-[1rem] md:text-lg lg:text-2xl mb-4 relative z-20'
