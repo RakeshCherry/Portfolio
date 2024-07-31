@@ -16,6 +16,7 @@ import {
 import { useState } from "react";
 import { sendContactForm } from "@/components/ui/api";
 import { div } from "three/examples/jsm/nodes/Nodes.js";
+import { BackgroundBeams } from '@/components/ui/Background-beams'
 
 interface FormValues {
   name: string;
@@ -87,6 +88,10 @@ const GmailConnect: React.FC = () => {
   };
 
   return (
+    <>
+    <div>
+      <BackgroundBeams/>
+    </div>
     <Container maxW="450px" mt={12} bg="#000319" color="white" p={6} borderRadius="md" boxShadow='2xl'>
       <Heading>Contact</Heading>
       {error && (
@@ -167,6 +172,7 @@ const GmailConnect: React.FC = () => {
         Submit
       </Button>
     </Container>
+    </>
   );
 };
 
