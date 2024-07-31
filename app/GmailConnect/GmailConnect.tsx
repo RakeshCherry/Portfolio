@@ -103,6 +103,7 @@ const GmailConnect: React.FC = () => {
       <FormControl isRequired isInvalid={touched.name && !values.name} mb={5}>
         <FormLabel>Name</FormLabel>
         <Input
+          className="relative z-20"
           type="text"
           name="name"
           errorBorderColor="red.300"
@@ -116,6 +117,7 @@ const GmailConnect: React.FC = () => {
       <FormControl isRequired isInvalid={touched.email && !values.email} mb={5}>
         <FormLabel>Email</FormLabel>
         <Input
+          className="relative z-20"
           type="email"
           name="email"
           errorBorderColor="red.300"
@@ -133,6 +135,7 @@ const GmailConnect: React.FC = () => {
       >
         <FormLabel>Subject</FormLabel>
         <Input
+          className="relative z-20"
           type="text"
           name="subject"
           errorBorderColor="red.300"
@@ -150,6 +153,7 @@ const GmailConnect: React.FC = () => {
       >
         <FormLabel>Message</FormLabel>
         <Textarea
+          className="relative z-20"
           name="message"
           rows={4}
           errorBorderColor="red.300"
@@ -161,6 +165,7 @@ const GmailConnect: React.FC = () => {
       </FormControl>
 
       <Button
+        className="relative z-20"
         variant="outline"
         colorScheme="blue"
         isLoading={isLoading}
