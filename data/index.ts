@@ -316,7 +316,7 @@ export const socialMedia = [
   {
     id: 4,
     img: "/link.png",
-    link:"#Connect",
+    link:"/LinkedIn",
   },
 ];
 
