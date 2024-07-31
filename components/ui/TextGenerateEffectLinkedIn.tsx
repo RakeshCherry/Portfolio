@@ -6,9 +6,12 @@ import { cn } from "@/utils/cn";
 export const TextGenerateEffectLinkedIn = ({
   words,
   className,
+  onComplete,
+
 }: {
   words: string;
   className?: string;
+  onComplete?: () => void;
 }) => {
     const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -25,8 +28,9 @@ export const TextGenerateEffectLinkedIn = ({
           opacity: 1,
         },
         {
-          duration: 2,
-          delay: stagger(0.1),
+          duration: 1,
+          delay: stagger(0.02),
+          onComplete,
         }
       );
     }
