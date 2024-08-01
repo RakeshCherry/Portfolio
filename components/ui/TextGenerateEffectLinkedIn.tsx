@@ -7,23 +7,23 @@ export const TextGenerateEffectLinkedIn = ({
   words,
   className,
   onComplete,
-
 }: {
   words: string;
   className?: string;
   onComplete?: () => void;
 }) => {
-    const ref = useRef(null);
+  const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const [scope, animate] = useAnimate();
   let wordsArray = words.split(" ");
   const orangeIndices = [6];
   const purpleIndices = [10, 11, 12, 13];
+  const emailIndex = 31; // Index for the email word
   
   useEffect(() => {
     if (isInView) {
       animate(
-        "span",
+        "span, a",
         {
           opacity: 1,
         },
@@ -40,13 +40,22 @@ export const TextGenerateEffectLinkedIn = ({
     return (
       <motion.div ref={scope}>
         {wordsArray.map((word, idx) => (
-          <motion.span
-            key={word + idx}
-            className={`opacity-0 ${purpleIndices.includes(idx) ? 'text-purple' : ''} ${orangeIndices.includes(idx) ? 'text-orange-500' : ''}`}
-          >
-            {word}{" "}
-          </motion.span>
+          idx !== emailIndex ? (
+            <motion.span
+              key={word + idx}
+              className={`opacity-0 ${purpleIndices.includes(idx) ? 'text-purple' : ''} ${orangeIndices.includes(idx) ? 'text-orange-500' : ''}`}
+            >
+              {word}{" "}
+            </motion.span>
+          ) : null
         ))}
+       <motion.a
+          key={wordsArray[emailIndex] + emailIndex}
+          href="mailto:rakeshbhavimani1@gmail.com"
+          className="text-blue-500 underline opacity-0"
+        >
+          {wordsArray[emailIndex]}{" "}
+        </motion.a>
       </motion.div>
     );
   };
