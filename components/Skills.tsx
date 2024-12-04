@@ -38,12 +38,13 @@ const skillSet = [
   {skill: 'Microservices'},
   {skill: 'Spring Security'},
   {skill: 'MySql'},
+  {skill: 'PostgreSQL'},
   {skill: 'MongoDB'},
+  {skill: 'Camunda'},
+  {skill: 'MobaXterm'},
   {skill: 'AWS'},
   {skill: 'Kafka'},
   {skill: 'Redis'},
-  {skill: 'Docker'},
-
   
 ]
 
