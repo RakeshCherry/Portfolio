@@ -195,7 +195,7 @@ export const projects = [
     des: "Using ChatGPT openAPI created ChatBot with Reactjs and SpringBoot(RestClient)",
     img: "/Chatbot.png",
     iconLists: ["/reactjs.png", "/css-3.png", "/javascript.png", "/spring.png"],
-    link: "https://github.com/RakeshCherry/chatBot",
+    link: "/github.com/RakeshCherry/chatBot",
   },
   {
     id: 3,
@@ -203,7 +203,7 @@ export const projects = [
     des: "Developed an Employee Management System with role-based authentication (Admin and User panels) using Spring Boot Security 6.",
     img: "/EmployeeManagementSystem.png",
     iconLists: ["/reactjs.png", "/tail.png", "/javascript.png", "/spring.png", "/mysql.png"],
-    link: "https://github.com/RakeshCherry/EmployeeAttendenceManagement",
+    link: "/github.com/RakeshCherry/EmployeeAttendenceManagement",
   },
   {
     id: 4,
@@ -211,7 +211,7 @@ export const projects = [
     des: "Built a full-stack hotel booking app using React.js, Spring Boot, and MySQL with features like listings, booking, and user auth.",
     img: "/BookMyHotel.png",
     iconLists: ["/spring.png", "/tail.png", "/javascript.png", "/reactjs.png", "/mysql.png"],
-    link: "https://github.com/RakeshCherry/BookMyHotel",
+    link: "/github.com/RakeshCherry/BookMyHotel",
   },
 ];
 
