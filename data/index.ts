@@ -5,7 +5,7 @@ export const navItems = [
   { name: "Projects", link: "#projects" },
   { name: "Skills", link: "#Skills" },
   { name: "Other", link: "#Achivements"},
-  // { name: "Contact", link: "/#Contact" },
+  { name: "Contact", link: "/#Contact" },
 
 ];
 
@@ -313,11 +313,11 @@ export const socialMedia = [
     img: "/insta.png",
     link:"https://www.instagram.com/rakeshbhavimani?igsh=MXFlZGxwajV0NmRqcg==",
   },
-  // {
-  //   id: 4,
-  //   img: "/link.png",
-  //   link:"/LinkedIn",
-  // },
+  {
+    id: 4,
+    img: "/link.png",
+    link:"/LinkedIn",
+  },
 ];
 
 export const Contact = [
